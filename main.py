@@ -176,19 +176,20 @@ class Ui_MainWindow(object):
             text = self.cal.toPlainText()
             if '+' in text:
                 text = text.split('+')
-                print(text)
+                self.cal.setPlainText(f"{float(text[0]) + float(text[-1])}")
             elif '-' in text:
                 text = text.split('-')
-                print(text)
+                self.cal.setPlainText(f"{float(text[0]) - float(text[-1])}")
             elif '*' in text:
                 text = text.split('*')
-                print(text)
+                self.cal.setPlainText(f"{float(text[0]) * float(text[-1])}")
             elif '/' in text:
                 text = text.split('/')
-                print(text)
+                self.cal.setPlainText(f"{float(text[0]) / float(text[-1])}")
             elif '%' in text:
                 text = text.split('%')
-                print(text)
+                self.cal.setPlainText(f"{float(text[0]) % float(text[-1])}")
+                
 
 
         # reminder
